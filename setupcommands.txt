@@ -21,3 +21,23 @@
    21  clear
    22  ssh ansible-node2
    23  history
+
+
+---- node 2 ----
+
+root@ansible-node1:~# history
+    1  hostnamectl set-hostname ansible-node1
+    2  reboot
+    3  vi /etc/host
+    4  vi /etc/hosts
+    5  history
+
+
+----- node 3 ------
+root@ansible-node2:~# history
+    1  hostnamectl set-hostname ansible-node2
+    2  reboot
+    3  vi /etc/hosts
+    4  history
+
+
