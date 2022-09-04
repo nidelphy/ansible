@@ -5,3 +5,31 @@ sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible -y
 
 ansible --version
+
+
+ 21  apt update
+   22  apt install software-properties-common -y
+   23  apt-add-repository --yes --update ppa:ansible/ansible
+   24  apt install ansible -y
+   25  ansible --version
+   26  clear
+   27  ls -lrth /etc/ansible/
+   28  vi /etc/ansible/ansible.cfg
+   29  vi /etc/ansible/hosts
+   30  ansible -m ping all
+   31  vi /etc/ansible/hosts
+   32  ansible -m ping all
+   33  vi /etc/ansible/hosts
+   34  ansible -m ping dev
+   35  ansible -m ping test
+   36  ansible -a ls all
+   37  ansible -a 'mkdir datadir1' all
+   38  ansible -a ls all
+   39  ansible --help
+   40  MODULE_ARGS
+   41  clear
+   42  ansible-doc -l
+   43  clear
+   44  ansible-doc -l
+   45  ansible-doc amazon.aws.ec2
+   46  history
