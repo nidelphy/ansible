@@ -41,3 +41,23 @@ root@ansible-node2:~# history
     4  history
 
 
+Add the user
+
+root@ansible-node2:~# useradd -m -d /home/ansbile-user1 -G sudo ansible-user1
+root@ansible-node2:~# passwd ansible-user1
+New password:
+Retype new password:
+passwd: password updated successfully
+root@ansible-node2:~#
+root@ansible-node2:~# vi /etc/sudoers.d/90-cloud-init-users
+root@ansible-node2:~#
+root@ansible-node2:~# cat /etc/sudoers.d/90-cloud-init-users
+# Created by cloud-init v. 22.2-0ubuntu1~20.04.1 on Sun, 04 Sep 2022 14:41:46 +0000
+
+# User rules for ubuntu
+ubuntu ALL=(ALL) NOPASSWD:ALL
+ansible-user1 ALL=(ALL) NOPASSWD:ALL
+root@ansible-node2:~#
+
+
+
