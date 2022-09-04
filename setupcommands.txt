@@ -1,0 +1,23 @@
+    1  clear
+    2  hostname
+    3  ip a
+    4  hostname -i
+    5  hostnamectl hostname ansible-master
+    6  hostnamectl ansible-master
+    7  hostnamectl --help
+    8  hostnamectl set-hostname ansible-master
+    9  sudo hostnamectl set-hostname ansible-master
+   10  clear
+   11  cat /etc/hostname
+   12  reboot
+   13  sudo reboot
+   14  clear
+   15  ping ansible-master
+   16  ping ansible-node1
+   17  vi /etc/hosts
+   18  sudo vi /etc/hosts
+   19  ping ansible-node1
+   20  ssh ansible-node1
+   21  clear
+   22  ssh ansible-node2
+   23  history
