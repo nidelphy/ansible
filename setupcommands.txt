@@ -60,4 +60,44 @@ ansible-user1 ALL=(ALL) NOPASSWD:ALL
 root@ansible-node2:~#
 
 
+Set Password authentication yes on both nodes
+
+root@ansible-node1:~# vi /etc/ssh/sshd_config
+root@ansible-node1:~#
+root@ansible-node1:~# systemctl restart sshd
+root@ansible-node1:~#
+
+generate key on master
+
+# ssh-keygen
+
+root@ansible-master:~# ls -lrtha .ssh/
+total 24K
+-rw------- 1 root root  557 Sep  4 14:41 authorized_keys
+drwx------ 4 root root 4.0K Sep  4 14:55 ..
+-rw-r--r-- 1 root root  888 Sep  4 15:19 known_hosts
+-rw-r--r-- 1 root root  573 Sep  4 15:21 id_rsa.pub
+-rw------- 1 root root 2.6K Sep  4 15:21 id_rsa
+drwx------ 2 root root 4.0K Sep  4 15:21 .
+root@ansible-master:~#
+
+ 9  ssh-copy-id ansible-user1@ansible-node1
+   10  cd .ssh/
+   11  cat id_rsa.pub
+   12  clear
+   13  ssh ansible-user1@ansible-node1
+
+
+root@ansible-master:~/.ssh# ssh-copy-id ansible-user1@ansible-node2
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/root/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+ansible-user1@ansible-node2's password:
+
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'ansible-user1@ansible-node2'"
+and check to make sure that only the key(s) you wanted were added.
+
 
