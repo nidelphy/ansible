@@ -1,0 +1,5 @@
+ansible-vault create my_vault_create_user.yml    #my_vault
+my_password: mysecret$1      
+ansible-vault view my_vault_create_user.yml
+
+ansible-playbook --ask-vault-pass 13-create-user.yml

@@ -1,0 +1,6 @@
+ansible-vault create vault.yml   #will ask for password to create a new enctypted password  # vault used AES256
+ansible-vault view vault.yml   # to display the conents of vault file in plain text mode
+ansible-vault edit vault.yml  # edit encrypted playbook
+ansible-vault rekey vault.yml # change password
+ansible-vault encrypt target.yml
+ansible-vault decrypt target.yml
