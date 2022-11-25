@@ -7,7 +7,7 @@
         path: /tmp/tmp.1.txt
         state: touch
         
--  hosts : ansible-node1
+-  hosts : test
    become: true
    name: install java
    tasks:
@@ -16,7 +16,7 @@
            name: Java
            state: latest
            
-   -  hosts : ansible-node2
+   -  hosts : prod
    become: true
    name: install mysql-server
    tasks:
