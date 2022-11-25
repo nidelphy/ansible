@@ -7,20 +7,3 @@
         path: /tmp/tmp.1.txt
         state: touch
         
--  hosts : test
-   become: true
-   name: install java
-   tasks:
-     - name: Install Java
-       apt:
-           name: Java
-           state: latest
-           
-   -  hosts : prod
-   become: true
-   name: install mysql-server
-   tasks:
-     - name: Install mysql-server
-       apt:
-           name: mysql-server
-           state: latest
